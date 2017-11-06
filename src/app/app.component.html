@@ -1,3 +1,64 @@
-<h1>
-  {{title}}
-</h1>
+
+<div *ngIf="!addtask"> 
+<h1>{{title}}</h1>
+    
+    <ul class="tasks">
+      <li *ngFor="let task of tasks"
+        [class.selected]="task === selectedTask"
+        (click)="onSelect(task)">
+        <span class="badge">{{task.Title}}</span> 
+      </li>
+    </ul>
+   <div>
+     <button class="btn btn-custom" (click)="add()">Add Task</button>
+  </div>
+</div>
+
+<div *ngIf="addtask">
+     <h1>Add Task</h1>
+
+ <form #f="ngForm" novalidate autocomplete="off" 
+       (ngSubmit)="addTasks(f.value)">
+    <div class="form-group">
+        <label> Title:</label>
+            <input type="text" [(ngModel)]="Title" name="Title" class="form-control" placeholder="Title" required
+                  #reffirst='ngModel' pattern="^[a-zA-Z]*$" maxlength="15" minlength="1">
+            <div *ngIf="reffirst.errors && (reffirst.dirty || reffirst.touched)" class="alert alert-danger">
+              <div [hidden]="!reffirst.errors.required">
+                              Title is required.
+              </div>
+              <div [hidden]="!reffirst.errors.minlength">
+                              Please enter atleast 2 characeters.
+               </div>
+                <div [hidden]="!reffirst.errors.pattern">
+                      Please enter alphabets.
+                </div>
+           </div>
+    </div>
+    <div class="form-group">
+        <label>Description:</label>
+            <input type="text" [(ngModel)]="Description" name="Description" id="Description" class="form-control" placeholder="Description"
+                  #redescription='ngModel'>
+          
+    </div>
+
+ 
+    <div class="form-group">
+        <label>Completion of Date:</label>
+            <input type="date" [(ngModel)]="CompletionDate" name="CompletionDate" id="CompletionDate" class="form-control" placeholder=" Enter date(mm/dd/yyyy) "
+                required #refdat='ngModel' pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" (change)="onchange(CompletionDate)"[ngStyle]="{'background-color':background_color}">
+               <div *ngIf="refdat.errors?.date">
+                    Enter date
+               </div>
+               <div *ngIf="refdat.errors && (refdat.dirty || refdat.touched)" class="alert alert-danger">
+                  <div [hidden]="!refdat.errors.required">
+                      Date is required.
+                  </div>
+               </div>
+    </div>
+         <button type="submit" id="btn-login" class="btn btn-custom"  [disabled]="f.invalid" >Submit</button>
+         <input type="button" id="btn-login" class="btn btn-custom" value="Reset" (click)="resetForm()" >
+  </form>
+</div>          
+<!-- to call the tasklist component to display the task -->
+    <task-detail [task]="selectedTask"></task-detail>

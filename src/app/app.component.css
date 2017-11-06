@@ -1,0 +1,123 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color:blueviolet;
+  }
+  h1 {
+    text-align:center
+  } 
+  
+.tasks {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+
+  .tasks li {
+    cursor: pointer;
+    position: relative;
+    left: 270%;
+    background-color:#607D8B;
+    margin: .5em;
+    padding: .3em 0;
+    
+    height: 1.6em;
+    border-radius: 4px;
+    text-align: center;
+    
+  }
+  .tasks li.selected:hover {
+    background-color:blueviolet !important;
+    color: blue;
+  }
+  .tasks li:hover {
+    color: #607D8B;
+    background-color:blueviolet;
+    left: 270%;
+  }
+  .tasks ul
+  {
+    margin:0;
+    padding-left:30% ;
+    text-align: center;
+    list-style:none;
+    left:100%   
+  }
+
+  .tasks .text {
+    position: relative;
+    top: -3px;
+  }
+  .tasks .badge {
+    display: inline-block;
+    font-size: small;
+    color: blue;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #EEE;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+    
+ .input{
+     margin-bottom: 25px;
+     width:100%;
+    margin-left: 100px;
+    margin-right:20px;
+    
+    
+ }
+.form-control
+{
+    color: #212121;
+    height:30px;
+  
+    border:1px solid blue;
+    font:16px/12px Georgia, Garamond, Serif;
+    overflow:auto;
+    text-align: initial;
+     margin-left:170px;
+    margin-right:100px;
+    
+    margin-top: 10px;
+    display:block;
+}
+
+  .btn-custom {
+    color: #fff;
+    background-color: #1fa67b;
+  }
+
+.btn-custom:hover,
+.btn-custom:focus {
+    color: blueviolet;
+  }
+   .form-group {
+    margin-bottom: 4px;
+    margin-top:1px;
+     width: 30%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-style: normal;
+    display:block
+    
+
+
+}
+   .btn.btn-custom {
+    font-size: 14px;
+    margin-bottom: 20px;
+    width:30%;
+    margin-left: 35%;
+    border-color: block;
+    text-align: center;
+    background-color: chocolate;
+    display:block;
+    
+     
+}

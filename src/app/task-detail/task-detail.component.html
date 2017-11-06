@@ -1,0 +1,12 @@
+<div *ngIf="task" class="media-title">
+      <h2>{{task.Title}} details!</h2>
+      <div class="media-meta"><label class="media-title">Title: </label>
+        <span class="badge">{{task.Title}}</span>
+      </div>
+      <div class="media-meta-scroll">
+        <label>Description: </label><span class="badge" >{{task.Description}}</span>
+      </div>
+      <div class="media-meta">
+        <label>Completion Date: </label><span class="badge">{{task.CompletionDate}}</span>
+      </div>
+</div>

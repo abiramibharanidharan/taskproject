@@ -1,0 +1,49 @@
+.media .title {
+    color: #2BBCDE;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+    
+}
+ .media-meta {
+    
+    font-size: 20px;
+    color:maroon;
+    margin-bottom: 20px;
+    width:30%;
+    left:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-top:auto;
+    
+}
+.span badge{
+    font-size: 20px;
+    color:maroon;
+    margin-bottom: 20px;
+    width:30%;
+    left:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-top:auto;
+}
+.media-meta-scroll {
+    font-size: 20px;
+    color:maroon;
+    margin-bottom: 20px;
+    width:30%;
+    left:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-top:auto;
+    overflow: scroll;
+}
+
+h2 {
+    text-align:center;
+    color:maroon;
+  } 
